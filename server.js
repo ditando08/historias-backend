@@ -13,12 +13,14 @@ const API_ID = process.env.WOOVI_API_ID;
 
 app.post("/criar-pix", async (req, res) => {
 
+  console.log(req.body);
+
   console.log("ROTA /criar-pix CHAMADA");
 
   try {
 
     const { nome, valor } = req.body;
-console.log(req.body);
+
     const response = await axios.post(
       "https://api.woovi.com/api/v1/charge",
       {
