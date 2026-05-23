@@ -24,11 +24,11 @@ app.post("/criar-pix", async (req, res) => {
     const response = await axios.post(
       "https://api.woovi.com/api/v1/charge",
       {
-        correlationID: "cantb_" + Date.now(),
+        correlationID: "TESTE999_" + Date.now(),
 
         value: Number(amount),
 
-        comment: "Doacao Site",
+        comment: "TESTE999",
 
         customer: {
   name: "Doador",
